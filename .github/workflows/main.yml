@@ -31,7 +31,6 @@ jobs:
             -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
             -H "Accept: application/json; api-version=2.0" \
             "$OIDC_URL_WITH_AUDIENCE"
-          echo "::add-mask::${IDTOKEN}"
           echo "idToken=${IDTOKEN}" >> $GITHUB_OUTPUT
 
       - name: Check Permissions in Kubernetes
